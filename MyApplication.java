@@ -58,7 +58,7 @@ public class MyApplication extends Application implements HasActivityInjector, H
 
         }
 
-        // initialize AppInjector by Dagger 2
+        // initialize AppInjector by Dagger 2 => here we provide AppComponent for the complete project
         mAppComponent = DaggerAppComponent.builder().application(this).build();
         mAppComponent.inject(this);
         AppInjector.init(this);
